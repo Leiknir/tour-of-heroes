@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import {HeroService } from './services/hero/hero.service';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './services/message/message.service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { MessageService } from './services/message/message.service';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [AppComponent]
